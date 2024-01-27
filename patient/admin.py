@@ -3,11 +3,9 @@
 from django.contrib import admin
 from patient.models.models import Patient, PatientHistory, PatientBilling, PatientLedger, TreatmentInformation, PatientReminder, PatientVisitList
 
-@admin.register(Patient)
-class PatientAdmin(admin.ModelAdmin):
-    list_display = ['PatientID', 'FirstName', 'MiddleName', 'LastName', 'Gender', 'DOB', 'ContactNumber']
-    search_fields = ['FirstName', 'LastName', 'ContactNumber']
-    list_filter = ['Gender']
+# @admin.register(Patient)
+# class PatientAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'user', 'phone_number', 'health_records')
     # Add more customization options as needed
 
 @admin.register(PatientHistory)

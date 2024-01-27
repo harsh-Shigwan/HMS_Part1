@@ -3,10 +3,14 @@ import uuid
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 
+# models.py
+from django.db import models
+from django.contrib.auth.models import User
+
 class Patient(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=20)
-    health_records = models.TextField() 
+    health_records = models.TextField()
     
 # Create your models here.
 class CNFT(models.Model):
